@@ -5,7 +5,11 @@ import DBConnetion from './database/db.js';
 
 const app = express();
 
-app.use(cors());
+app.use(cors(
+    {
+        origin: 'https://client-nine-green-66.vercel.app/'
+    }
+));
 app.use('/', router);
 
 const  PORT = 8000;
